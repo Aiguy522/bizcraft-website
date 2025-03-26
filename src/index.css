@@ -52,7 +52,7 @@
 
 @layer components {
   .glass {
-    @apply bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20 shadow-xl;
+    @apply bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20 shadow-xl transition-all duration-300 hover:bg-opacity-20;
   }
 
   .section-container {
@@ -94,4 +94,21 @@
     after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-foreground after:scale-x-0 after:origin-center 
     after:transition-transform after:duration-300 hover:after:scale-x-100;
   }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.shadow-3xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.hover\:shadow-3xl:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
