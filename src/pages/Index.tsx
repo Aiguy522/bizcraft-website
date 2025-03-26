@@ -29,11 +29,15 @@ const Index = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <Navbar />
-      <HeroSection />
-      <ServicesSection />
-      <AboutSection />
-      <ContactSection />
-      <Footer />
+      <div className="relative">
+        <HeroSection />
+        <div className="relative bg-background">
+          <ServicesSection />
+          <AboutSection />
+          <ContactSection />
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 };
